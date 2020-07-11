@@ -28,7 +28,7 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	
 	ofstream cout ("cowroute.out");
-  ifstream cin ("cowroute.in");
+ 	ifstream cin ("cowroute.in");
 
 	int a,b,n, ans=INT_MAX;
 	cin>>a>>b>>n;
