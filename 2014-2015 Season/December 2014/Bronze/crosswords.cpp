@@ -25,8 +25,8 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    //ofstream cout ("crosswords.out");
-    //ifstream cin ("crosswords.in");
+    ofstream cout ("crosswords.out");
+    ifstream cin ("crosswords.in");
  
     int n,m;
     cin>>n>>m;
