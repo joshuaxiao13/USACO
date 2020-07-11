@@ -25,8 +25,8 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    //ofstream cout ("cowjog.out");
-    //ifstream cin ("cowjog.in");
+    ofstream cout ("cowjog.out");
+    ifstream cin ("cowjog.in");
     
     int n;
     cin>>n;
