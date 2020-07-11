@@ -34,7 +34,6 @@ int main() {
  	
  	int N;
  	cin>>N;
- 
  	
  	int bEven=0;
 	int bOdd=0;
