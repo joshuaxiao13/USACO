@@ -25,8 +25,8 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    //ofstream cout ("marathon.out");
-    //ifstream cin ("marathon.in");
+    ofstream cout ("marathon.out");
+    ifstream cin ("marathon.in");
     
     int n,prevA,prevB,total=0;
     cin>>n;
