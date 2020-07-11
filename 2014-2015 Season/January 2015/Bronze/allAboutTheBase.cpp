@@ -27,8 +27,8 @@ int main() {
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
 	
-	//ofstream cout ("whatbase.out");
-  	//ifstream cin ("whatbase.in");
+	ofstream cout ("whatbase.out");
+  	ifstream cin ("whatbase.in");
 
 	int k;
 	cin>>k;
@@ -81,6 +81,5 @@ int main() {
 			}
 		}
 	}
-	
 	return 0;
 }
