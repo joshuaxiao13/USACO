@@ -28,7 +28,7 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	
 	//ofstream cout ("whatbase.out");
-  //ifstream cin ("whatbase.in");
+ 	//ifstream cin ("whatbase.in");
 
 	int k;
 	cin>>k;
