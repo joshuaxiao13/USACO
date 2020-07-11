@@ -25,8 +25,8 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    //ofstream cout ("learning.out");
-    //ifstream cin ("learning.in");
+    ofstream cout ("learning.out");
+    ifstream cin ("learning.in");
     
     int n,a,b;
     cin>>n>>a>>b;
