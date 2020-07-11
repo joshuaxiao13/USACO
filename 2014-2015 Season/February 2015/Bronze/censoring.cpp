@@ -38,7 +38,7 @@ int main() {
 		ans+=s[i];
 		
 		if(int(ans.size())>=int(t.size()) && ans.substr(ans.size()-t.size())==t)
-			ans=ans.substr(0,ans.size()-t.size())
+			ans=ans.substr(0,ans.size()-t.size());
 	}
 	
 	cout<<ans<<"\n";
