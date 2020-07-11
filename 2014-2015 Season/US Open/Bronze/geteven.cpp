@@ -87,7 +87,7 @@ int main() {
 			if(a%2==0) ++oEven;
 			else ++oOdd;
 		}
-		else{
+		else {
 			if(a%2==0) ++mEven;
 			else ++mOdd;
 		}
@@ -140,7 +140,6 @@ int main() {
 	}
 	
  	cout<<ans<<"\n";
- 	
 	return 0;
 }
 
