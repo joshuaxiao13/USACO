@@ -81,7 +81,7 @@ int main() {
 			}
 			//SE
 			if(r+2<=y-1 && c+2<=x-1) {
-				if ( (pzl[r][c]!='O' && pzl[r+2][c+2]!='M' && pzl[r][c]==pzl[r+1][c+1] && pzl[r+1][c+1]!=pzl[r+2][c+2]) || (pzl[r][c]!='M' && pzl[r+2][c+2]!='O' && pzl[r][c]!=pzl[r+1][c+1] && pzl[r+1][c+1]==pzl[r+2][c+2] ) ) {
+				if ( (pzl[r][c]!='O' && pzl[r+2][c+2]!='M' && pzl[r][c]==pzl[r+1][c+1] && pzl[r+1][c+1]!=pzl[r+2][c+2]) || (pzl[r][c]!='M' && pzl[r+2][c+2]!='O' && pzl[r][c]!=pzl[r+1][c+1] && pzl[r+1][c+1]==pzl[r+2][c+2]) ) {
 				string str="";
 				str.pb(pzl[r][c]);
 				str.pb(pzl[r+1][c+1]);
