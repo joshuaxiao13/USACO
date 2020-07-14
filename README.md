@@ -1,4 +1,4 @@
 # USACO
 My solutions to USACO contests :)
 
-(just bronze for now)
+just bronze for now...
