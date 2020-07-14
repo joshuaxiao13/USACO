@@ -37,7 +37,6 @@ int main() {
 	else ans=max(b,d)-min(a,c);
 	
 	cout<<ans<<"\n";
-	
 	return 0;
 }
 
