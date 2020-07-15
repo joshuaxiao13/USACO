@@ -33,6 +33,7 @@ int solve(int a, int b) {
 			if(x.s<b) ++quad3;
 			else ++quad2;
 		}
+		
 		else {
 			if(x.s<b) ++quad4;
 			else ++quad1;
