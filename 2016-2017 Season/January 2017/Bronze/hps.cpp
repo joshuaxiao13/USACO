@@ -43,12 +43,10 @@ int main() {
 	string s="123";
 	
 	do {  
-
 		int player1=0;
       
-		for(pi x: turns) {
-			if( (s[x.f-1]=='1' && s[x.s-1]=='3') || (s[x.f-1]>s[x.s-1] && (s[x.f-1]!='3' || s[x.s-1]!='1'))) ++player1;
-		}
+		for(pi x: turns)
+			if( (s[x.f-1]=='1' && s[x.s-1]=='3') || (s[x.f-1]>s[x.s-1] && (s[x.f-1]!='3' || s[x.s-1]!='1')) ) ++player1;
 
 		ans=max(ans,player1);
         
