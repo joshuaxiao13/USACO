@@ -53,8 +53,7 @@ int main() {
 	int idx=n;
 	for(int i=m-1; i>=0; --i) {
 		
-		if(position[socialH[i]]!=-1)
-			idx=position[socialH[i]];
+		if(position[socialH[i]]!=-1) idx=position[socialH[i]];
 			
 		else if(socialH[i]==1) {
 			
@@ -62,8 +61,7 @@ int main() {
 			
 			for(int j=0; j<=i; ++j) {
 				
-				if(position[socialH[j]]!=-1)
-					idx=position[socialH[j]];
+				if(position[socialH[j]]!=-1) idx=position[socialH[j]];
 				
 				else {
 					while(order[idx]!=-1) ++idx;
@@ -71,7 +69,6 @@ int main() {
 					position[socialH[j]]=idx;
 				}
 			}
-			
 			break;
 		}
 			
@@ -86,7 +83,6 @@ int main() {
 	
 	else {
 		for(int i=1; i<=n; ++i) {
-			//cout<<order[i]<<" ";
 			if(order[i]==-1) {
 				cout<<i<<"\n";
 				break;
