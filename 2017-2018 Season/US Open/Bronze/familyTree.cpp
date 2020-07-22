@@ -70,7 +70,7 @@ int main() {
 		bLine.pop_back();
 	}
 
-	//if some kind of great/grand/mother direct descendant
+	//if great/grand/mother direct descendant
 	if(aLine.size()==0 || bLine.size()==0) {
 		if(aLine.size()==0) {
 			if(bLine.size()==1) cout<<a<<" is the mother of "<<b<<"\n";
