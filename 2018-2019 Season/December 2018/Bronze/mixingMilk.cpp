@@ -53,6 +53,5 @@ int main() {
 	}
 	
 	cout<<a<<"\n"<<b<<"\n"<<c<<"\n";
- 	
 	return 0;
 }
