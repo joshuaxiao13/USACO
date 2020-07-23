@@ -37,11 +37,9 @@ int main() {
  	for(int&q : barn2) cin>>q;
  	
  	//1 swap = use one bucket twice and 2 different buckets for other 2 days OR use one bucket 3 times and 1 bucket once
- 	for(auto x : barn1) {
-		for(auto y: barn2) {
+ 	for(auto x : barn1)
+		for(auto y: barn2)
 			vals.insert(y-x);
-		}
-	}
 	
 	//2 swaps = use 4 different buckets
 	for(int i=0; i<10; ++i)
