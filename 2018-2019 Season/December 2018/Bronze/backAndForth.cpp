@@ -49,7 +49,6 @@ int main() {
 			for(int x=0; x<10; ++x)
 				for(int y=x+1; y<10; ++y)
 					vals.insert(barn2[y]+barn2[x]-barn1[i]-barn1[j]);
-
  	
  	cout<<vals.size()<<"\n";
 	return 0;
