@@ -15,8 +15,6 @@ typedef unsigned long ul;
 typedef vector<ll> vl;
 typedef pair<int,int> pi;
 typedef vector<pi> vpi;
-typedef set<int> si;
-typedef multiset<int> mi;
  
 const ll INF = 1e18;
 const int MOD = 1e9+7;
