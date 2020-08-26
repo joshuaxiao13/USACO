@@ -73,10 +73,14 @@ int main() {
 	
 	for(int xMn=0; xMn<4; ++xMn) {
 		for(int xMx=n-1; xMx>n-5; --xMx) {
+			
 			if(xMn>xMx) break;
+			
 			for(int yMn=0; yMn<4; ++yMn) {
 				for(int yMx=n-1; yMx>n-5; --yMx) {
+					
 					if(yMn>yMx) break;
+					
 					if(valid(xMn, xMx, yMn, yMx)) {
 						int area=(x[xMx]-x[xMn])*(y[yMx]-y[yMn]);
 						ans=min(ans, area);
