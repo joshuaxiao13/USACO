@@ -39,8 +39,8 @@ int main() {
 		state[b[0]-'A'][b[1]-'A'].pb(i);
 		if(a[0]==b[0] && a[1]==b[1]) continue;
 		
-		vi &x=city[b[0]-'A'][b[1]-'A'];
-		vi &y=state[a[0]-'A'][a[1]-'A'];
+		vi &x = city[b[0]-'A'][b[1]-'A'];
+		vi &y = state[a[0]-'A'][a[1]-'A'];
 		if(x.size()==0 || y.size()==0) continue;
 		
 		int idx1=0, idx2=0;
