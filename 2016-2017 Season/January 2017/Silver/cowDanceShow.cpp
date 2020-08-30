@@ -38,7 +38,6 @@ bool valid(int k) {
 	while(--k) q.pop();
 	if(q.top()>tMx) return false;
 	else return true;
-	
 }
  
 int main() {
