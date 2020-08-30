@@ -50,8 +50,8 @@ int main() {
 		for(int p1=0; p1<3; ++p1) {
 			for(int p2=0; p2<3; ++p2) {
 				if(p1==p2) continue;
-				int temp=0;
 				
+				int temp=0;
 				temp+=plays[i][(p1+1)%3];
 				temp+=plays[n-1][(p2+1)%3]-plays[i][(p2+1)%3];
 				ans = max(ans, temp);
