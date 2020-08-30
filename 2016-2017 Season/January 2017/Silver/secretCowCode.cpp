@@ -34,8 +34,7 @@ int main() {
 		if( (n-1)%s.size()==0 && ((n-1)/s.size())%2==0 && __builtin_popcount((n-1)/s.size()/2)==1) --n;
 		else {
 			ll temp = ceil(log(double(n)/s.size())/log(2));
-			--temp;
-			n-=(1LL<<(temp))*s.size()+1;
+			n-=(1LL<<(temp-1))*s.size()+1;
 		}
 	}
 	
