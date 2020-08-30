@@ -29,7 +29,7 @@ int main() {
 	int n;
 	cin >> n;
 	
-	vector<vi> plays(n, vi(3,0));
+	vector<vi> plays(n, vi(3,0));	//0=H, 1=S, 2=P
 	
 	for(int i=0; i<n; ++i) {
 		char move;
