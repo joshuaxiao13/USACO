@@ -23,14 +23,13 @@ vi dy={0,1,0,-1};
 vpi adj[100][100];
 int n;
 
-void dfs(pi a, pi destination, vector<vector<bool>> &visited) {
+void dfs(pi a, vector<vector<bool>> &visited) {
 	
 	int r,c;
 	tie(r,c)=a;
 	
 	if(visited[r][c]) return;
 	visited[r][c]=true;
-	if(a==destination) return;
 	
 	for(int i=0; i<4; ++i) {
 		if(r+dx[i]<0 || r+dx[i]>=n || c+dy[i]<0 || c+dy[i]>=n) continue;
@@ -41,7 +40,7 @@ void dfs(pi a, pi destination, vector<vector<bool>> &visited) {
 				break;
 			}
 		}
-		if(!road) dfs({r+dx[i], c+dy[i]}, destination, visited);
+		if(!road) dfs({r+dx[i], c+dy[i]}, visited);
 	}
 }
  
@@ -76,9 +75,9 @@ int main() {
 	int ans=0;
 	
 	for(int i=0; i<k; ++i) {
+		vector<vector<bool>> visited(n, vector<bool>(n, false));
+		dfs(cow[i], visited);
 		for(int j=i+1; j<k; ++j) {
-			vector<vector<bool>> visited(n, vector<bool>(n, false));
-			dfs(cow[i], cow[j], visited);
 			if(!visited[cow[j].f][cow[j].s]) ++ans;
 		}
 	}
