@@ -29,9 +29,9 @@ int main() {
 	
 	int n;
 	cin >> n;
-	vector<pair<ll,ll>> cows(n);
+	vpi cows(n);
 	
-	ll ans=0;
+	int ans=0;
 	
 	for(int i=0; i<n; ++i) cin >> cows[i].s >> cows[i].f;
 	
