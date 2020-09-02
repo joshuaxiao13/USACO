@@ -70,7 +70,7 @@ int main() {
 					if(s.size()!=2) continue;
 					else {
 						char c1=*s.begin();
-						int cnt1=0, cnt2=0;		//counters for the number of contingous regions belong to each character
+						int cnt1=0, cnt2=0;		//counters for the number of contingous regions belonging to each character
 						
 						vector<vector<bool>> visited(n, vector<bool>(n,false));
 						queue<pi> q;
