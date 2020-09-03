@@ -32,7 +32,7 @@ void colorIn(int x) {
 
 void floydsAlgo(int x) {
 	
-	int a=adj[x], b=adj[a];
+	int a=adj[x], b=adj[adj[b]];
 	while(a!=b && color[a]!=1 && color[b]!=1) {
 		a=adj[a];
 		b=adj[adj[b]];
