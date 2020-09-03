@@ -40,7 +40,7 @@ int main() {
 	}
 	
 	set<int> s;
-	int onDuty=0, totalCovered=0, start;
+	int onDuty=0, totalCovered=0, prev;
 	
 	while(!q.empty()) {
 		int t, state, num;
@@ -48,16 +48,16 @@ int main() {
 		q.pop();
 		
 		if(state==0) {
-			if(onDuty==0) start=t;
-			else if(onDuty==1) decrease[*s.begin()]+=t-start;
+			if(onDuty==0) prev=t;
+			else if(onDuty==1) decrease[*s.begin()]+=t-prev;
 			s.insert(num);
 			++onDuty;
 		}
 		
 		else {
-			if(onDuty==1) decrease[*s.begin()]+=t-start;
-			totalCovered+=t-start;
-			start=t;
+			if(onDuty==1) decrease[*s.begin()]+=t-prev;
+			totalCovered+=t-prev;
+			prev=t;
 			s.erase(s.lb(num));
 			--onDuty;
 		}
