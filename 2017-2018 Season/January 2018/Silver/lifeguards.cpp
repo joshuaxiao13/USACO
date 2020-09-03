@@ -63,9 +63,9 @@ int main() {
 		}
 	}
 	
-	int minTime=INT_MAX;
-	for(auto x: decrease) minTime=min(x, minTime);
+	int minDecrease=INT_MAX;
+	for(auto x: decrease) minDecrease=min(x, minDecrease);
 	
-	cout << totalCovered-minTime << '\n';
+	cout << totalCovered-minDecrease << '\n';
 	return 0;
 }
