@@ -50,6 +50,8 @@ int main() {
 		if(state==0) {
 			if(onDuty==0) prev=t;
 			else if(onDuty==1) decrease[*s.begin()]+=t-prev;
+			totalCovered+=t-prev;
+			prev=t;
 			s.insert(num);
 			++onDuty;
 		}
