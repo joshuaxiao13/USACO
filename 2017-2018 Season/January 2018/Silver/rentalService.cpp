@@ -32,15 +32,15 @@ bool cmp(pi a, pi b) {
 
 ll sellToStore(ll gallons) {
 	
-	ll profit=0;
+	ll profit = 0;
 	pair<ll,ll> p = make_pair(gallons, 0);
-	int idx = ub(store.begin(), store.end(), p)-store.begin();
+	int idx = ub(store.begin(), store.end(), p) - store.begin();
 	--idx;
 	
-	profit+=store[idx].s;
-	gallons-=store[idx].f;
+	profit += store[idx].s;
+	gallons -= store[idx].f;
 	
-	if(gallons && idx+1<=M) profit+=gallons*((store[idx+1].s-store[idx].s)/(store[idx+1].f-store[idx].f));
+	if(gallons && idx+1<=M) profit += gallons*((store[idx+1].s-store[idx].s)/(store[idx+1].f-store[idx].f));	//gallons*rate
 
 	return profit;
 }
@@ -71,9 +71,9 @@ int main() {
 	for(int i=1; i<=N; ++i) output[i] = cow[i-1] + output[i-1];
 	for(int i=1; i<=R; ++i) rent[i] = farm[i-1] + rent[i-1];
 	for(int i=1; i<=M; ++i) {
-		store[i].s*=store[i].f;
-		store[i].s+=store[i-1].s;
-		store[i].f+=store[i-1].f;
+		store[i].s *= store[i].f;
+		store[i].s += store[i-1].s;
+		store[i].f += store[i-1].f;
 	}
 	
 	ll ans=0;
