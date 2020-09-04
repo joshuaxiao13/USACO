@@ -34,7 +34,7 @@ ll sellToStore(ll gallons) {
 	
 	ll profit = 0;
 	pair<ll,ll> p = make_pair(gallons, 0);
-	int idx = ub(store.begin(), store.end(), p) - store.begin();
+	int idx = ub(store.begin(), store.end(), p)-store.begin();
 	--idx;
 	
 	profit += store[idx].s;
