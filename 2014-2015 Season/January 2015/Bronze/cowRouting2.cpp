@@ -62,8 +62,8 @@ int main() {
 		}
 
 		for(int j=0; j<int(route[i].size()); j++) {
-			if(j>aIdx)	aToCity[route[i][j]]=min(aToCity[route[i][j]], cost[i]);
-			if(j<bIdx)	cityToB[route[i][j]]=min(cityToB[route[i][j]], cost[i]);
+			if(j>aIdx)  aToCity[route[i][j]]=min(aToCity[route[i][j]], cost[i]);
+			if(j<bIdx)  cityToB[route[i][j]]=min(cityToB[route[i][j]], cost[i]);
 		}
 	}
 	
