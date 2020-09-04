@@ -32,10 +32,8 @@ vl getBessie() {
 	q.push({0,1});
 	
 	while(!q.empty()) {
-		
 		int a = q.top().s;
 		q.pop();
-		
 		if(visited[a]) continue;
 		visited[a]=true;
 		
@@ -60,10 +58,8 @@ vl getElsie() {
 	q.push({0,2});
 	
 	while(!q.empty()) {
-		
 		int a = q.top().s;
 		q.pop();
-		
 		if(visited[a]) continue;
 		visited[a]=true;
 		
@@ -88,10 +84,8 @@ vl getFarm() {
 	q.push({0,N});
 	
 	while(!q.empty()) {
-		
 		int a = q.top().s;
 		q.pop();
-		
 		if(visited[a]) continue;
 		visited[a]=true;
 		
