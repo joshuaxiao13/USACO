@@ -81,7 +81,7 @@ int main() {
 	//k = number of cows rented to farms
 	for(int k=0; k<=min(N, R); ++k) {
 		ll profit = rent[k] + sellToStore(output[N]-output[k]);
-		ans=max(ans, profit);
+		ans = max(ans, profit);
 	}
 	
 	cout << ans << '\n';
