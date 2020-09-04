@@ -26,9 +26,8 @@ vl getBessie() {
 	
 	vl d(N+1, INF);
 	vector<bool> visited(N+1, false);
-	d[1]=0;
-	
 	priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> q;
+	d[1]=0;
 	q.push({0,1});
 	
 	while(!q.empty()) {
@@ -52,9 +51,8 @@ vl getElsie() {
 	
 	vl d(N+1, INF);
 	vector<bool> visited(N+1, false);
-	d[2]=0;
-	
 	priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> q;
+	d[2]=0;
 	q.push({0,2});
 	
 	while(!q.empty()) {
@@ -78,9 +76,8 @@ vl getFarm() {
 	
 	vl d(N+1, INF);
 	vector<bool> visited(N+1, false);
-	d[N]=0;
-	
 	priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> q;
+	d[N]=0;
 	q.push({0,N});
 	
 	while(!q.empty()) {
