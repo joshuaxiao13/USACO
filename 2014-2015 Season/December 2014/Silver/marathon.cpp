@@ -38,11 +38,12 @@ int main() {
 	vector<vi> dp(K+1, vi(N, 2e6));
 	dp[0][0]=0;
 	
-	for(int s=0; s<=K; ++s) {						//s = number of skips to arrive at "from" checkpoint
+	for(int s=0; s<=K; ++s) {					//s = number of skips to arrive at "from" checkpoint
 		for(int from=0; from<N; ++from) {			//from = position of checkpoint visited before "to" checkpoint
 			for(int to=from+1; to<N; ++to) {		//to = position of desired checkpoint after (to-from-1) skips from "from" checkpoint
 				int totalSkips = s + (to-from-1);
 				if(totalSkips>K) break;
+				
 				int fromToDistance = abs(pos[to][0] - pos[from][0]) + abs(pos[to][1] - pos[from][1]);
 				dp[totalSkips][to] = min(dp[totalSkips][to], dp[s][from] + fromToDistance);
 			}
