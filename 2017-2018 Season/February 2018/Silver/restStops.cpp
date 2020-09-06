@@ -40,7 +40,6 @@ int main() {
 	int idx = 0, prevPos = 0;
 	
 	while(idx<N) {
-		
 		int c, x;
 		tie(c, x) = grass[idx];
 		
