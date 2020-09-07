@@ -28,7 +28,7 @@ int main() {
 	ofstream cout ("teleport.out");
 	
 	map<ll,ll> m; 	//m[i] = difference in slope of line formed by (i-1)th and ith breakpoint and slope of line formed by ith and (i+1)th breakpoint
-	
+			//minimum of sum of distances will occur at a breakpoint
 	int N;
 	cin >> N;
 	int haul[N][2];
