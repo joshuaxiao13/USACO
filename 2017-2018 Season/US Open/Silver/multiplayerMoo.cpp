@@ -103,8 +103,7 @@ int main() {
 		for(int i=0; i<N; ++i) {
 			int regionNum = reg[j][i];
 			for(int k=0; k<4; ++k) {
-				if(j+dy[k]>=0 && j+dy[k]<N && i+dx[k]>=0 && i+dx[k]<N && reg[j+dy[k]][i+dx[k]]!=regionNum) 
-					adj[regionNum].insert(reg[j+dy[k]][i+dx[k]]);
+				if(inBounds(j, i, dy[k], dx[k]) && reg[j+dy[k]][i+dx[k]]!=regionNum) adj[regionNum].insert(reg[j+dy[k]][i+dx[k]]);
 			}
 		}
 	}
