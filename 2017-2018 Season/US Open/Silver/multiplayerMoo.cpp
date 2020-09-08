@@ -25,7 +25,7 @@ int reg[250][250];							//reg[j][i] = region that j-i th element belongs to
 int cellsInRegion[62501];						//cellsInRegion[x] = total number of cells/elements in xth region
 int id[62501];								//id[x] = ID of cells/elements in xth region
 set<int> adj[62501];							//adj[x] stores the adjacent regions of region x
-set<int> tested[62501];							//tested[x] stores regions x's adjacent IDs that have been tested
+set<int> tested[62501];							//tested[x] stores region x's adjacent IDs that have been tested
 
 int dx[] = {0, 0, 1, -1};
 int dy[] = {1, -1, 0, 0};
@@ -91,12 +91,14 @@ int main() {
 		}
 	}
 	
+	//bfs to find the regions that each element belongs to
 	for(int j=0; j<N; ++j) {
 		for(int i=0; i<N; ++i) {
 			if(reg[j][i]==0) bfs(j, i);
 		}
 	}
 	
+	//transverse grid, find connected regions and store in adj[]
 	for(int j=0; j<N; ++j) {
 		for(int i=0; i<N; ++i) {
 			int regionNum = reg[j][i];
@@ -107,9 +109,10 @@ int main() {
 		}
 	}
 	
+	//transverse regions and calculate total number of cells covered by 2 IDs, optimize using tested[] to calculate each group of regions once only
 	for(int k=1; k<=regions; ++k) {
 		
-		ans2 = max(ans2, cellsInRegion[k]);
+		ans2 = max(ans2, cellsInRegion[k]);	//not necessary, problem gurantees two distinct IDs
 		set<int> s;
 		
 		for(auto x : adj[k]) {
