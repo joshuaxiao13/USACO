@@ -22,10 +22,10 @@ const int MOD = 1e9+7;
 int N, regions = 0, ans1 = 1, ans2 = 1;
 int g[250][250];							//g[j][i] = ID of j-i th element
 int reg[250][250];							//reg[j][i] = region that j-i th element belongs to
-int cellsInRegion[62501];					//cellsInRegion[x] = total number of cells/elements in xth region
+int cellsInRegion[62501];						//cellsInRegion[x] = total number of cells/elements in xth region
 int id[62501];								//id[x] = ID of cells/elements in xth region
-set<int> adj[62501];						//adj[x] stores the adjacent regions of region x
-set<int> tested[62501];						//tested[x] stores regions x's adjacent IDs that have been tested
+set<int> adj[62501];							//adj[x] stores the adjacent regions of region x
+set<int> tested[62501];							//tested[x] stores regions x's adjacent IDs that have been tested
 
 int dx[] = {0, 0, 1, -1};
 int dy[] = {1, -1, 0, 0};
