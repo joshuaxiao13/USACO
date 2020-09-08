@@ -108,7 +108,7 @@ int main() {
 		}
 	}
 	
-	//transverse regions and calculate total number of cells covered by 2 IDs, optimize using tested[] to calculate each group of regions once only
+	//transverse regions and calculate total number of cells covered by 2 IDs using dfs, optimize using tested[] to calculate each group of regions once only
 	for(int k=1; k<=regions; ++k) {
 		
 		ans2 = max(ans2, cellsInRegion[k]);	//not necessary, problem gurantees two distinct IDs
