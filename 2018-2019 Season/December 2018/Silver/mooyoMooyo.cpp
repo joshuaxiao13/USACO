@@ -47,7 +47,6 @@ void eliminate(int r, int c) {
 				q.push({j+dy[k], i+dx[k]});
 			}
 		}
-		
 	}
 }
 
@@ -73,7 +72,6 @@ bool bfs(int r, int c, vector<vector<bool>> &visited) {
 	}
 	
 	return cnt >= K;
-
 }
 
 void getNewGrid() {
