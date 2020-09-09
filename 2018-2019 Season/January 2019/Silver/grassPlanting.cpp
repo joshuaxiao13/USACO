@@ -19,7 +19,6 @@ typedef tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_up
 const ll INF = 1e18;
 const int MOD = 1e9+7;
 
-int N, ans = 1;
 int adj[100001];
  
 int main() {
@@ -30,6 +29,7 @@ int main() {
 	ifstream cin ("planting.in");
 	ofstream cout ("planting.out");
 
+	int N, ans = 1;
 	cin >> N;
 	
 	for(int i = 0; i < N - 1; ++i) {
