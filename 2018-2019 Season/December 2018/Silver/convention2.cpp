@@ -47,24 +47,21 @@ int main() {
 	
 	for(int i = 0; i < N; ++i) {
 		
-		ll a, t;
-		int seniority;
-		tie(a, t, seniority) = cow[i];
-		q.push(make_tuple(seniority, a, t));
+		ll a = get<0>(cow[i]), t = get<1>(cow[i]);
+		prev = a + t;
 		
-		while(i + 1 < N && get<0>(cow[i+1]) <= prev) {
-			++i;
-			tie(a, t, seniority) = cow[i];
-			q.push(make_tuple(seniority, a, t));
-		}
-		
-		ll arrival = get<1>(q.top()), duration = get<2>(q.top());
-		q.pop();
-		
-		if(prev <= arrival) prev = arrival + duration;
-		else {
-			ans = max(ans, prev - arrival);
-			prev += duration;
+		while(!q.empty() || (i + 1 < N && get<0>(cow[i+1]) <= prev)) {	//the waiting list is not empty or a cow can be added to the waiting list
+			while(i + 1 < N && get<0>(cow[i+1]) <= prev) {		//if a cow can be added to the waiting list
+				int seniority;
+				tie(a, t, seniority) = cow[i+1];
+				q.push(make_tuple(seniority, a, t));
+				++i;
+			}
+			
+			a = get<1>(q.top()), t = get<2>(q.top());
+			q.pop();
+			ans = max(ans, prev - a);
+			prev += t;
 		}
 	}
 	
