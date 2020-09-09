@@ -91,7 +91,6 @@ int main() {
 			if(visited[j][i] || !g[j][i]) continue;
 			int area = 0, perimeter = 0;
 			bfs(j, i, area, perimeter);
-			
 			if(area > ans1) ans1 = area, ans2 = perimeter;
 			else if(area == ans1) ans2 = min(ans2, perimeter);
 		}
