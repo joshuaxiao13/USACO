@@ -41,7 +41,7 @@ int main() {
 		int weight, s, d;
 		cin >> weight >> s >> d;
 		sumOfWeights += a;
-		cow[i] = {s, weight};	//pos, direction, weight
+		cow[i] = {s, weight};	//pos, weight
 		if(d == -1) left.pb(s);
 		else right.pb(s);
 	}
