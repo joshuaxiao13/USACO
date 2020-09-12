@@ -36,39 +36,32 @@ int main() {
 	
 	cin >> N >> L;
 	vector<tuple<int, int, int>> cow(N);
+	vi left, right;
 	
 	for(int i = 0; i < N; ++i) {
 		int a, b, c;
 		cin >> a >> b >> c;
 		sumOfWeights += a;
 		cow[i] = make_tuple(b, c, a);	//pos, direction, weight
+		if(c == -1) left.pb(b);
+		else right.pb(b);
 	}
 	
 	sort(cow.begin(), cow.end());
+	sort(left.begin(), left.end());
+	sort(right.begin(), right.end());
 	
-	vi left, right;
-	queue<int> goingLeft, goingRight;
-	
-	for(int i = 0; i < N; ++i) {
-		int a, b, c;
-		tie(a, b, c) = cow[i];
-		pos[i] = a;
-		w[i] = c;
-		if(b == -1) goingLeft.push(i), left.pb(a);
-		else goingRight.push(i), right.pb(a);
-	}
+	for(int i = 0; i < N; ++i) w[i] = get<2>(cow[i]);
 	
 	vpi arrival;
 	
 	for(int i = 0; i < N; ++i) {
-		while(!goingLeft.empty()) {
-			int x = goingLeft.front(); goingLeft.pop();
-			arrival.pb({pos[x], w[i]});
+		for(auto x : left) {
+			arrival.pb({x, w[i]});
 			++i;
 		}
-		while(!goingRight.empty()) {
-			int x = goingRight.front(); goingRight.pop();
-			arrival.pb({L - pos[x], w[i]});
+		for(auto x : right) {
+			arrival.pb({L - x, w[i]});
 			++i;
 		}
 	}
@@ -96,5 +89,4 @@ int main() {
 	cout << ans << '\n';
 	return 0;
 }
-
 
