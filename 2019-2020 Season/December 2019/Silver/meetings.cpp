@@ -22,7 +22,6 @@ const int MOD = 1e9+7;
 int N, L;
 int sumOfWeights = 0;
 int w[50000];
-int pos[50000];
 
 int main() {
 	
