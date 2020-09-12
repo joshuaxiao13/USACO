@@ -38,12 +38,12 @@ int main() {
 	vi left, right;
 	
 	for(int i = 0; i < N; ++i) {
-		int a, b, c;
-		cin >> a >> b >> c;
+		int weight, s, d;
+		cin >> weight >> s >> d;
 		sumOfWeights += a;
-		cow[i] = make_tuple(b, c, a);	//pos, direction, weight
-		if(c == -1) left.pb(b);
-		else right.pb(b);
+		cow[i] = make_tuple(s, d, weight);	//pos, direction, weight
+		if(d == -1) left.pb(s);
+		else right.pb(s);
 	}
 	
 	sort(cow.begin(), cow.end());
