@@ -32,6 +32,8 @@ int main() {
 	ifstream cin ("meetings.in");
 	ofstream cout ("meetings.out");
 	
+	//plan: 1. find time at which condition is satisfied, 2. find total interactions
+	
 	cin >> N >> L;
 	vector<tuple<int, int, int>> cow(N);
 	
@@ -94,3 +96,5 @@ int main() {
 	cout << ans << '\n';
 	return 0;
 }
+
+
