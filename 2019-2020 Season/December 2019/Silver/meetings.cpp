@@ -34,14 +34,14 @@ int main() {
 	//plan: 1. find time at which condition is satisfied, 2. find total interactions
 	
 	cin >> N >> L;
-	vector<tuple<int, int, int>> cow(N);
+	vpi cow(N);
 	vi left, right;
 	
 	for(int i = 0; i < N; ++i) {
 		int weight, s, d;
 		cin >> weight >> s >> d;
 		sumOfWeights += a;
-		cow[i] = make_tuple(s, d, weight);	//pos, direction, weight
+		cow[i] = {s, weight};	//pos, direction, weight
 		if(d == -1) left.pb(s);
 		else right.pb(s);
 	}
