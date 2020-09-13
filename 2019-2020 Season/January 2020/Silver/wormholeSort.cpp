@@ -19,35 +19,39 @@ typedef tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_up
 const ll INF = 1e18;
 const int MOD = 1e9+7;
 
-int N, M, cnt = 0;
-bool inPlace[100001];
+int N, M, mnW, cnt;
+int pos[100001];
+int inComponent[100001];
 bool visited[100001];
 vpi adj[100001];
+set<int> s;
 
-int dfs(int a, int x) {
+void dfs(int a) {
 	
-	if(visited[a]) {
-		return 0;
-	}
+	if(visited[a]) return;
 	visited[a] = true;
-	int ret = 0;
-	if(!inPlace[a]) ret = 1;
+	inComponent[a] = cnt;
 	
 	for(auto p : adj[a]) {
 		int b, w;
 		tie(b, w) = p;
-		if(w >= x) ret += dfs(b, x);
+		if(w >= mnW) dfs(b);
 	}
-	
-	return ret;
 }
 
-bool valid(int x) {
+bool valid(int k) {
+
+	bool good = true;
+	auto it = s.begin();
+	advance(it, k);
+	mnW = *it;
+	cnt = 0;
 	
-	bool good = false;
+	for(int i = 1; i <= N; ++i) if(!visited[i]) ++cnt, dfs(i);
+	
 	for(int i = 1; i <= N; ++i) {
-		if(!inPlace[i] && dfs(i, x) == N - cnt) {
-			good = true;
+		if(inComponent[i] != inComponent[pos[i]]) {
+			good = false;
 			break;
 		}
 	}
@@ -66,28 +70,32 @@ int main() {
 	
 	cin >> N >> M;
 	
+	bool sorted = true;
 	for(int i = 1; i <= N; ++i)  {
 		int a;
 		cin >> a;
-		inPlace[i] = (a == i);
-		if(a == i) ++cnt;
+		pos[i] = a;
+		if(i != a) sorted = false;
 	}
-	
-	int mx = 0;
 	
 	for(int i = 0; i < M; ++i) {
 		int a, b, w;
 		cin >> a >> b >> w;
 		adj[a].pb({b, w});
 		adj[b].pb({a, w});
-		mx = max(mx, w);
+		s.insert(w);
 	}
 	
-	int ans = 1;
-	if(cnt == N) ans = -1;
+	int ans = 0;
+	if(sorted) ans = -1;
 	else {
-		for(int k = mx/2; k >= 1; k/=2)
-			while(ans + k <= mx && valid(ans + k)) ans += k;
+		for(int k = s.size()/2; k >= 1; k/=2) {
+			while(ans + k < s.size() && valid(ans + k)) ans += k;
+		}
+		
+		auto it = s.begin();
+		advance(it, ans);
+		ans = *it;
 	}
 	
 	cout << ans << '\n';
