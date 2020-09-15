@@ -52,6 +52,7 @@ int main() {
 	
 	for(int i = 0; i < 20001; ++i) {
 		vl &a = yAtXEquals[i], &b = xAtYEquals[i];
+		
 		if(!a.empty()) {
 			ll temp = 0;
 			for(auto y : a) {
@@ -102,3 +103,4 @@ int main() {
 	
 	return 0;
 }
+
