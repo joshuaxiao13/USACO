@@ -21,8 +21,8 @@ const int MOD = 1e9+7;
 
 const ll inc = 1e4;
 ll N;
-vl yAtXEquals[20001], xAtYEquals[20001];	//yAtXEquals[i] stores all y-coordinates of points on x = i
-vl sumOfY[20001], sumOfX[20001];			//sumOfY[i] = sum of x-coordinates of points on y = i
+vl yAtXEquals[20001], xAtYEquals[20001];	//yAtXEquals[i] stores all y-coordinates of points on x = i sorted in increasing y-value
+vl sumOfY[20001], sumOfX[20001];		//sumOfY[i][j] = sum of x-coordinates of points on y = i up to and including jth point in xAtYEquals[]
 vector<pair<ll,ll>> pole;
  
 int main() {
