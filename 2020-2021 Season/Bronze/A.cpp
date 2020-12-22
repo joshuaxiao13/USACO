@@ -17,13 +17,11 @@ int main() {
 	int sumBC = num[6] - num[0], lhs = 1, rhs = 5;
 	
 	while(lhs < rhs) {
-		if(num[lhs] + num[rhs] == sumBC) {
-			cout << num[0] << " " << num[lhs] << " " << num[rhs] << '\n';
-			break;
-		}
+		if(num[lhs] + num[rhs] == sumBC) break;
 		else if(num[lhs] + num[rhs] > sumBC) --rhs;
 		else ++lhs;
 	}
 	
+	cout << num[0] << " " << num[lhs] << " " << num[rhs] << '\n';
 	return 0;
 }
