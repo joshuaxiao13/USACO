@@ -77,13 +77,11 @@ int main() {
 		pq.pop();
 	}
 	
-	for(int i = 0; i < n; ++i) {
+	for(int i = 0; i < n; ++i)
 		if(ans[i] == INF) dfs(i);
-	}
 	
-	for(int i = 0; i < n; ++i) {
+	for(int i = 0; i < n; ++i)
 		cout << blame[i] << '\n';
-	}
 	
 	return 0;
 }
