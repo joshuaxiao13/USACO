@@ -53,12 +53,10 @@ int main() {
 	
 	for(int j = 0; j < n; ++j) {
 		for(int i = j + 1; i < n; ++i) {
-			if(coord[j].s > coord[i].s) {
+			if(coord[j].s > coord[i].s)
 				ans += (up[j][i] - up[j][j] + 1) * (down[i][i] - down[i][j] + 1);
-			}
-			else {
+			else
 				ans += (down[j][i] - down[j][j] + 1) * (up[i][i] - up[i][j] + 1);
-			}
 		}
 	}
 	
