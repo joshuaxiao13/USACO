@@ -21,12 +21,10 @@ int dfs(int u) {
 		passport[x] = true;
 	if(!vis[succ[u]])
 		return ans[u] = dfs(succ[u]);
-	else {
-		for(int i = 0; i < N; ++i)
-			if(passport[i]) 
-				++ans[u];
-		return ans[u];
-	}
+	for(int i = 0; i < N; ++i)
+		if(passport[i]) 
+			++ans[u];
+	return ans[u];
 }
 
 int main() {
