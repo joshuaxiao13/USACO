@@ -60,8 +60,7 @@ int main() {
 		
 	while(Q--) {
 		int a, b;
-		cin >> a >> b;
-		--a, -- b;
+		cin >> a >> b, --a, -- b;
 		cout << (a - 1 == -1 ? 0 : psumForward[a-1]) + (b + 1 == N ? 0 : psumBackward[b+1]) << '\n';
 	}
 	
