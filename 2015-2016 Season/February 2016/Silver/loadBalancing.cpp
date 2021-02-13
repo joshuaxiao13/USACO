@@ -36,6 +36,7 @@ int main() {
 	for(int i = 0; i < n; ++i) {
 		for(int j = 0; j < n; ++j) {
 			int cntUp = 0, cntDown = 0, k = j;
+			// while loop takes care of the case when mutlipe cows share the same x-coordinate
 			while(k < n && cow[k].f == cow[j].f) {
 				(cow[k].s >= cow[i].s ? ++cntUp : ++cntDown);
 				++k;
