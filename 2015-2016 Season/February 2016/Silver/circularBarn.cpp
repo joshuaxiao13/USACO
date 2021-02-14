@@ -3,7 +3,6 @@ using namespace std;
 
 #define pb push_back
 #define eb emplace_back
-#define mp make_pair
 #define f first
 #define s second
 
@@ -46,7 +45,7 @@ int main() {
 		int c;
 		cin >> c;
 		if(c == 0) continue;
-		flock.pb(mp(c, i));
+		flock.eb(c, i);
 	}
 	
 	int ans = INT_MAX;
