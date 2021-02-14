@@ -3,7 +3,6 @@ using namespace std;
 
 #define pb push_back
 #define eb emplace_back
-#define mp make_pair
 #define f first
 #define s second
 
@@ -46,7 +45,7 @@ int main() {
 	for(int i = 0; i < N; ++i) {
 		int c;
 		cin >> c;
-		flock.pb(mp(c, i));
+		flock.eb(c, i);
 	}
 	
 	for(int i = 0; i < N; i = (i + 1) % N) {
