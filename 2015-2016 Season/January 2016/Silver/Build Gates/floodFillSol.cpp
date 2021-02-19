@@ -55,6 +55,7 @@ int main() {
 	}
 
 	int faces = 0;
+	
 	for(int j = 0; j <= mxN; ++j) {
 		for(int i = 0; i <= mxN; ++i) {
 			if(fence[j][i]) continue;
