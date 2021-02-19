@@ -1,6 +1,6 @@
 // idea is to "enlarge the grid" so that lattice points can also be represented
 // not just cells on the grid/farm, flood fill from any point and count the number
-// of faces in the planar graph
+// of faces in the planar graph, number of gates required is F - 1, where F is the number of faces
 
 #include <bits/stdc++.h>
 using namespace std;
