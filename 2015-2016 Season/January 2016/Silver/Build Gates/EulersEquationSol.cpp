@@ -57,7 +57,7 @@ int main() {
 			++E;
 			st.insert(make_pair(V, fence[prevY][prevX]));
 		}
-		else if(st.count(make_pair(fence[curY][curX], fence[prevY][prevX])) == 0 && st.count(make_pair(fence[prevY][prevX], fence[curY][curX])) == 0) {
+		else if(st.find(make_pair(fence[curY][curX], fence[prevY][prevX])) == st.end() && st.find(make_pair(fence[prevY][prevX], fence[curY][curX])) == st.end()) {
 			++E;
 			st.insert(make_pair(fence[curY][curX], fence[prevY][prevX]));
 		}
