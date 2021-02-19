@@ -36,10 +36,10 @@ int main() {
 	vector<pi> road(n);
 	
 	for(int i=0; i<n; ++i) {
-	 int a,b;
-	 cin>>a>>b;
-	 sum+=a;
-	 road[i]={sum,b};
+		int a,b;
+		cin>>a>>b;
+		sum+=a;
+		road[i]={sum,b};
 	}
 	
 	int ans=0;
@@ -47,14 +47,14 @@ int main() {
 	int curSum=0;
 	
 	for(int i=0; i<m; ++i) {
-	 int a,b;
-	 cin>>a>>b;
-	 curSum+=a;
-	 ans=max(ans, b-road[idx].s);
-	 
+		int a,b;
+	 	cin>>a>>b;
+	 	curSum+=a;
+	 	ans=max(ans, b-road[idx].s);
+		
 		while(curSum>road[idx].f) {
-		 ++idx;
-		 ans=max(ans, b-road[idx].s);
+			++idx;
+			ans=max(ans, b-road[idx].s);
 		}
 		
 		if(curSum==road[idx].f) ++idx;
