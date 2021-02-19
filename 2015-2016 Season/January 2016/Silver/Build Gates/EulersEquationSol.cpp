@@ -21,6 +21,8 @@ int main() {
 	// https://www2.math.upenn.edu/~mlazar/math170/notes05-3.pdf
 	// Euler's Eqution for Planar Graphs
 	// V - E + F = 2
+	// The minimum number of edges to connect F faces is F - 1 edges
+	
 	// F = E - V + 2
 	// F - 1 = E - V + 1
 
