@@ -21,7 +21,7 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	
 	// https://www2.math.upenn.edu/~mlazar/math170/notes05-3.pdf
-	// Euler's Eqution for Planar Graphs
+	// Euler's Equation for Planar Graphs
 	// V - E + F = 2
 	// The minimum number of edges to connect F faces is F - 1 edges (the outside face also counts as a face)
 	
