@@ -2,7 +2,7 @@
 // if not possible to win current round, greedily play smallest card in deck
 // use DSU (Disjoint Set Union) to efficiently find smallest card remaining higher than Elsie's card
 // Ex. if Elsie plays a card with value x, the card Bessie should play is find(x)
-// Remember to handle the case where find(x+1) > 2*N, this means that Bessie will lose the current round regardless of what card she plays
+// Remember to handle the cases where find(x) > 2*N, this means that Bessie will lose the current round regardless of what card she plays
 
 #include <bits/stdc++.h>
 using namespace std;
