@@ -48,7 +48,7 @@ int main() {
 		}
 	}
 	
-	// something similar to Bellman Ford, runs N*N - 1 (number of "nodes" - 1) times
+	// something similar to Bellman Ford, runs N*N - 1 (number of squares/"nodes" - 1) times
 	// idea is to start at (1, 1) and see what lights can be turned on, and keep track of
 	// which squares are "travel-able" from (1, 1) with 2D array vis, flip on all the switches
 	// of squares that are "travel-able", every time a new light is flipped on, increase answer
