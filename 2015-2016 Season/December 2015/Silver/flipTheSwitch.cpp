@@ -26,8 +26,8 @@ int main() {
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
 	
-	//ifstream cin ("lightson.in");
-	//ofstream cout ("lightson.out");
+	ifstream cin ("lightson.in");
+	ofstream cout ("lightson.out");
 	
 	cin >> N >> M;
 	
