@@ -1,3 +1,4 @@
+// sort Elsie's cards from least to greatest
 // greedily play smallest remaining card greater than Elsie's current card to score a point
 // if not possible to win current round, greedily play smallest card in deck
 // use DSU (Disjoint Set Union) to efficiently find smallest card remaining higher than Elsie's card
