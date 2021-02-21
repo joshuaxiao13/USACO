@@ -26,8 +26,8 @@ int main() {
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
 	
-	ifstream cin ("13.in");
-	//ofstream cout ("buffet.out");
+	ifstream cin ("buffet.in");
+	ofstream cout ("buffet.out");
 	
 	cin >> N >> E;
 	
