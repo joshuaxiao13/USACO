@@ -34,7 +34,7 @@ int main() {
  	// if (B + E + S + S + I + E) (G + O + E + S) (M + O + O) is a
  	// a multiple of 7, one of the "parts" must be a multiple of 7
  	// this is because 7 is a prime number, we are only concerned with
- 	// the the variables modulo 7, we can run through all 7^7 possibilites
+ 	// the the variables modulo 7, we can run through all 7^7 ~ 10^6 possibilites
   
 	ll ans = 0;
 	
