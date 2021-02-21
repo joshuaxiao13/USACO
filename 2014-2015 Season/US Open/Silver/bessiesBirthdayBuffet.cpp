@@ -48,22 +48,22 @@ int main() {
 		}
 	}
 	
-	// Dijkstra's on every node
 	
-	priority_queue<pair<int,int>> pq;
+	// BFS from every node to find shortest path
+	
+	queue<int> q;
 	
 	for(int i = 0; i < N; ++i) {
-		vector<bool> processed(N, false);
+		vector<bool> vis(N, false);
 		dis[i][i] = 0;
-		pq.push({0, i});
-		while(!pq.empty()) {
-			int u = pq.top().s; pq.pop();
-			if(processed[u]) continue;
-			processed[u] = true;
+		vis[i] = true;
+		q.push(i);
+		while(!q.empty()) {
+			int u = q.front(); q.pop();
 			for(auto v : adj[u]) {
-				if(dis[i][v] > dis[i][u] + 1) {
+				if(!vis[v] && dis[i][v] > dis[i][u] + 1) {
 					dis[i][v] = dis[i][u] + 1;
-					pq.push({-dis[i][v], v});
+					q.push(v);
 				}
 			}
 		}
