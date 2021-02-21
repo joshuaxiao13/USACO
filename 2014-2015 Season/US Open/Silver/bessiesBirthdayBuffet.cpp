@@ -78,11 +78,10 @@ int main() {
 	int ans = 0;
 	
 	for(int i = 0; i < N; ++i) {
-		int temp = energy[order[i]];
+		dp[order[i]] = energy[order[i]];
 		for(int j = 0; j < i; ++j) {
-			temp = max(temp, energy[order[i]] + dp[order[j]] - E*dis[order[i]][order[j]]); 
+			dp[order[i]] = max(temp, energy[order[i]] + dp[order[j]] - E*dis[order[i]][order[j]]); 
 		}
-		dp[order[i]] = temp;
 		ans = max(ans, dp[order[i]]);
 	}
 	
