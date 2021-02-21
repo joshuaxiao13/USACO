@@ -21,9 +21,8 @@ int main() {
 	cin >> N >> B;
 	
 	vector<pair<int,int>> bale(N);
-	for(auto &[P,S] : bale) {
+	for(auto &[P,S] : bale)
 		cin >> S >> P;
-	}
 	
 	sort(bale.begin(), bale.end());
 	
