@@ -1,5 +1,3 @@
-// solve with prefix sums
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -24,6 +22,8 @@ int main() {
 	
 	int N, Q;
 	cin >> N >> Q;
+	
+	// solve with prefix sums
 	
 	for(int i = 1; i <= N; ++i) {
 		int x;
