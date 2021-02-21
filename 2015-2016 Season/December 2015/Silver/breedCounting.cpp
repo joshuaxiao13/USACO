@@ -1,3 +1,5 @@
+// solve with prefix sums
+
 #include <bits/stdc++.h>
 using namespace std;
 
