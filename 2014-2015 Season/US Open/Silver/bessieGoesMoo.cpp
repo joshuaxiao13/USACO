@@ -73,7 +73,6 @@ int main() {
 		}
 	}
 	
-	assert(ans >= 0);
 	cout << ans << '\n';
 	
 	return 0;
