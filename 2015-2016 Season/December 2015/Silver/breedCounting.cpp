@@ -34,9 +34,8 @@ int main() {
 	while(Q--) {
 		int a, b;
 		cin >> a >> b;
-		for(int i = 0; i < 3; ++i) {
+		for(int i = 0; i < 3; ++i)
 			cout << breed[i][b] - breed[i][a-1] << (i == 2 ? "\n" : " ");
-		}
 	}
 	
 	return 0;
