@@ -48,7 +48,7 @@ int main() {
 		}
 	}
 	
-	// Djikstra's on every node
+	// Dijkstra's on every node
 	
 	priority_queue<pair<int,int>> pq;
 	
@@ -80,7 +80,8 @@ int main() {
 	for(int i = 0; i < N; ++i) {
 		dp[order[i]] = energy[order[i]];
 		for(int j = 0; j < i; ++j) {
-			dp[order[i]] = max(temp, energy[order[i]] + dp[order[j]] - E*dis[order[i]][order[j]]); 
+			if(dis[order[i]][order[j]] == INF) continue;
+			dp[order[i]] = max(dp[order[i]], energy[order[i]] + dp[order[j]] - E*dis[order[i]][order[j]]); 
 		}
 		ans = max(ans, dp[order[i]]);
 	}
