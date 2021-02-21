@@ -48,7 +48,7 @@ int main() {
 		}
 	}
 	
-	// Dijkstra's on every node
+	// Djikstra's on every node
 	
 	priority_queue<pair<int,int>> pq;
 	
