@@ -11,7 +11,7 @@ using vi = vector<int>;
 
 const int mxN = 1e5;
 int N, K;
-set<int> landOn[mxN];
+unordered_set<int> landOn[mxN];
 int succ[mxN], ans[mxN];
 bool vis[mxN], passport[mxN];
 
