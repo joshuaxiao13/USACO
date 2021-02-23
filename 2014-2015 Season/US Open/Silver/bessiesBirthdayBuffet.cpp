@@ -17,10 +17,6 @@ int energy[1000];
 int dp[1000];
 vi adj[1000];
 
-bool cmp(int u, int v) {
-	return energy[u] > energy[v];
-}
-
 int main() {
 	
 	cin.tie(NULL);
@@ -74,6 +70,10 @@ int main() {
 	vi order(N);
 	iota(order.begin(), order.end(), 0);
 	sort(order.begin(), order.end(), cmp);
+	
+	sort(order.begin(), order.end(), [&](int u, int v) {
+		return energy[u] > energy[v];
+	});
 	
 	int ans = 0;
 	
