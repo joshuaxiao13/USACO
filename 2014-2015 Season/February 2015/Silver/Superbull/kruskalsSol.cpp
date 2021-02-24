@@ -45,6 +45,7 @@ int main() {
 	}
 	
 	vector<tuple<int,int,int>> edges;
+	
 	for(int i = 0; i < N; ++i) {
 		for(int j = i + 1; j < N; ++j) {
 			edges.eb(ID[i] ^ ID[j], i, j);
