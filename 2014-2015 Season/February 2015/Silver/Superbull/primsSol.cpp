@@ -1,3 +1,5 @@
+// more than 10x faster than solution using Kruskal's Algorithm
+
 #include <bits/stdc++.h>
 using namespace std;
 
