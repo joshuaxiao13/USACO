@@ -11,8 +11,7 @@ using vi = vector<int>;
 
 const int MOD = 1000000007;
 
-int grid[100][100];
-int dp[100][100];
+int grid[100][100], dp[100][100];
 
 int main() {
 	
