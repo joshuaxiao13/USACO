@@ -55,6 +55,8 @@ int main() {
 	ll ans = 0;
 	sort(edges.rbegin(), edges.rend());
 
+	// order which the games are played don't matter that much since we end up with a tree and we can always "peel away" the furthest nodes from the root (the winner)
+
 	for(auto [w, u, v] : edges) {
 		if(!same(u, v)) {
 			unite(u, v);
