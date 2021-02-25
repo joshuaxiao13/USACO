@@ -14,9 +14,9 @@ struct endpoint {
 	bool enter;
 	bool operator< (const endpoint &p) {
 		if(x == p.x) {
-			if(enter && p.enter) return y < p.y;
-			else if(!enter && !p.enter) return y > p.y;
-			return enter;
+			if(enter && p.enter) return y < p.y;		// if two cows enter at the same time, we want to process the one with the least y-coordinate (the one infront)
+			else if(!enter && !p.enter) return y > p.y;	// if two cows exit at the same time, we want to process the one with the greatest y-coordinate (the one behind)
+			return enter;					// process a cow that enters before a cow that exits when two endpoints occur at the same time
 		}
 		return x < p.x;
 	}
