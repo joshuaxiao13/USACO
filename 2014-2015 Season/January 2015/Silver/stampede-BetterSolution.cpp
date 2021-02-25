@@ -46,9 +46,7 @@ int main() {
 				active.insert(sweep[i].s);
 			++i;
 		}
-		
 		--i;
-		
 		if(!active.empty())
 			spotted.insert(*active.begin());
 	}
