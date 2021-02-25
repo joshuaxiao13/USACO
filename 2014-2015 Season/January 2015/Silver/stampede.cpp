@@ -81,7 +81,7 @@ int main() {
 	for(int i = 0; i < 2*N; ++i) {
 		endpoint &p = sweep[i];
 		if(p.enter) {
-			// paste 
+			// paste here if you decide to go with choice a)
 			s.insert({-p.y, p.id});
 			if((*s.rbegin()).f == -p.y) {
 				++ans;
@@ -92,6 +92,7 @@ int main() {
 			if((*s.rbegin()).f == -p.y && !spotted[p.id])
 				++ans;
 			s.erase({-p.y, p.id});
+			// delete the code below if you decide to go with choice a)
 			if(!s.empty()) {
 				int idx = (*s.rbegin()).s;
 				if(!spotted[idx]) {
