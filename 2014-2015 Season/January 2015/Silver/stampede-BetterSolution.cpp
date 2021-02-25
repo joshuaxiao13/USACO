@@ -52,5 +52,6 @@ int main() {
 	}
 	
 	cout << spotted.size() << '\n';
+	
 	return 0;
 }
