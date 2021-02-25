@@ -58,7 +58,7 @@ int main() {
 	set<pair<int,int>> s;
 	vector<bool> spotted(N, false);		// spotted[id] stores whether cow with id has already been spotted by Farmer John 
 	
-	/*	There are 3 cases where a cow can be spotted by Farmer John:
+	/*	There are 3 cases when a cow can be spotted by Farmer John:
 	 
 	  1) Cow segment crosses line x = 0, and has the least y-coordinate of all cow segments currently having some part on x = 0
 	  2) Cow segment exits line x = 0, and has the least y-coordinate of all cow segments currently having some part on x = 0
