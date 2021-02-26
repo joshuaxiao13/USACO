@@ -39,8 +39,8 @@ int main() {
 	int A, B, N;
 	cin >> A >> B >> N, --A, --B;
 	
-  // first find find shortest distance between every city in a route
-  // shortest distance includes both cost and number of cities visited
+  	// first find find shortest distance between every city in a route
+  	// shortest distance includes both cost and number of cities visited
   
 	for(int i = 0; i < N; ++i) {
 		ll w;
