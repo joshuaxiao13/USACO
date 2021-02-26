@@ -65,7 +65,7 @@ int main() {
 		if(processed[u]) continue;
 		processed[u] = true;
 		for(int v = 0; v < mxN; ++v) {
-			if(cost[u][v].f == INF) continue;
+			if(cost[u][v].f == INF || u == v) continue;
 			pair<ll,int> p = {d[u].f + cost[u][v].f, d[u].s + cost[u][v].s};
 			if(d[v] > p) {
 				d[v] = p;
