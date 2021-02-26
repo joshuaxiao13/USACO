@@ -62,6 +62,7 @@ int main() {
 	while(!pq.empty()) {
 		int u = get<2>(pq.top());
 		pq.pop();
+		if(u == B) break;
 		if(processed[u]) continue;
 		processed[u] = true;
 		for(int v = 0; v < mxN; ++v) {
