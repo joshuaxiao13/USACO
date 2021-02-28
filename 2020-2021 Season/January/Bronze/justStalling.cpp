@@ -23,7 +23,8 @@ int main() {
 	int bound = -1;
 
 	for(int i = 0; i < N; ++i) {
-		while(bound + 1 < N && b[bound + 1] >= a[i]) ++bound;
+		while(bound + 1 < N && b[bound + 1] >= a[i])
+			++bound;
 		if(bound + 1 - i <= 0) {
 			cout << "0\n";
 			break;
