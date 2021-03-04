@@ -54,7 +54,7 @@ int main() {
 				mxX = min(mxX, cntR[y][i]);
 				closest = min(closest, closeR[y][i]);
 				if(mxX < closest) continue;
-				ans += 1LL*(mxX - closest + 1);
+				ans += mxX - closest + 1;
 			}
 
 		}
