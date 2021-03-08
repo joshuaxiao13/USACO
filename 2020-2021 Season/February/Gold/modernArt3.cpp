@@ -38,7 +38,6 @@ int main() {
 				deduction -= (board[K] == board[K+1] && board[L] == board[R] && board[K] == board[L]);
 				dp[L][R] = min(dp[L][R], dp[L][K] + dp[K+1][R] - deduction);
 			}
-
 		}
 	}
 
