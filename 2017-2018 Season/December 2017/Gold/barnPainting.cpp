@@ -25,30 +25,16 @@ void dfs(int u) {
 			dfs(v);
 		}
 	}
-	if(col[u] != -1) {
-		dp[u][col[u]] = 1;
-		if(child[u].size()) {
-			for(auto v : child[u]) {
-				int sum = 0;
-				for(int paint = 0; paint < 3; ++paint) {
-					if(col[u] == paint) continue;
-					(sum += dp[v][paint]) %= MOD;
-				}
-				(dp[u][col[u]] *= sum) %= MOD;
+	for(int paint1 = 0; paint1 < 3; ++paint1) {
+		if(col[u] != -1 && col[u] != paint1) continue;
+		dp[u][paint1] = 1;
+		for(auto v : child[u]) {
+			int sum = 0;
+			for(int paint2 = 0; paint2 < 3; ++paint2) {
+				if(paint1 == paint2) continue;
+				(sum += dp[v][paint2]) %= MOD;
 			}
-		}
-	}
-	else {
-		for(int paint1 = 0; paint1 < 3; ++paint1) {
-			dp[u][paint1] = 1;
-			for(auto v : child[u]) {
-				int sum = 0;
-				for(int paint2 = 0; paint2 < 3; ++paint2) {
-					if(paint1 == paint2) continue;
-					(sum += dp[v][paint2]) %= MOD;
-				}
-				(dp[u][paint1] *= sum) %= MOD;
-			}
+			(dp[u][paint1] *= sum) %= MOD;
 		}
 	}
 }
