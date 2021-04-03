@@ -39,9 +39,3 @@ int main() {
 	cout << ans << '\n';
 	return 0;
 }
-
-/*
-* use long long when dealing with MOD 1e9 + 7
-* clear memory after testcases
-*/
-
