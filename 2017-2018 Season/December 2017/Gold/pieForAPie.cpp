@@ -19,8 +19,8 @@ int N, bestB[mxN], bestE[mxN];	// B for Bessie, E for Elsie
 struct pie {
 	ll tasteB, tasteE;
 	int idx;
-	pie(ll tasteB, ll tasteE, int idx) :
- 	tasteB(tasteB), tasteE(tasteE), idx(idx) {}
+	pie(ll b, ll e, int i) :
+ 	tasteB(b), tasteE(e), idx(i) {}
 };
 
 int main() {
