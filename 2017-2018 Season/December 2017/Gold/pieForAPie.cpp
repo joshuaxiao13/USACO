@@ -20,7 +20,7 @@ struct pie {
 	ll tasteB, tasteE;
 	int idx;
 	pie(ll tasteB, ll tasteE, int idx) :
-  tasteB(tasteB), tasteE(tasteE), idx(idx) {}
+ 	tasteB(tasteB), tasteE(tasteE), idx(idx) {}
 };
 
 int main() {
