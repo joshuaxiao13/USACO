@@ -90,7 +90,7 @@ int main() {
 			}
 			
 			for(int k = N; k > 0; k /= 2) {
-				while(lhs + k < N && p.tasteB - pieE[lhs+k].tasteB > D) {lhs += k;};
+				while(lhs + k < N && p.tasteB - pieE[lhs+k].tasteB > D) {lhs += k;}
 			}
 
 			for(int j = lhs + 1; j <= rhs; ++j) {
@@ -109,7 +109,7 @@ int main() {
 			}
 
 			for(int k = N; k > 0; k /= 2) {
-				while(lhs + k < N && p.tasteE - pieB[lhs+k].tasteE > D) {lhs += k;};
+				while(lhs + k < N && p.tasteE - pieB[lhs+k].tasteE > D) {lhs += k;}
 			}
 
 			for(int j = lhs + 1; j <= rhs; ++j) {
