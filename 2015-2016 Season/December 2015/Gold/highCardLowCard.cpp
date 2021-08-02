@@ -10,7 +10,7 @@ int main() {
 	
 	int N; cin >> N;
 	
-	vector<bool> vis(2*N + 1, false);
+	vector<bool> vis(2*N+1, false);
 	vector<int> elsie(N);
 	
 	for (int& x : elsie) {
