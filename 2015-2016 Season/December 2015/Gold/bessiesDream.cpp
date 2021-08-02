@@ -13,9 +13,7 @@ int main() {
 	
 	int N, M; cin >> N >> M;
 	
-	vector<vector<int>> g(N, vector<int>(M));
-	
-	for (auto& r : g) for (auto& c : r) cin >> c;
+	int g[N][M]; for (auto& r : g) for (auto& c : r) cin >> c;
 	
 	int best[N][M][2];
 	bool processed[N][M][2];
