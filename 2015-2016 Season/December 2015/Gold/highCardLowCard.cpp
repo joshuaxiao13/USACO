@@ -31,7 +31,7 @@ int main() {
 		auto it = half1.upper_bound(elsie[i]);
 		if (it == half1.end()) it = half1.begin();
 		else ++ans;
-    half1.erase(it);
+    		half1.erase(it);
 	}
 	
 	for (int i = N/2; i < N; ++i) {
