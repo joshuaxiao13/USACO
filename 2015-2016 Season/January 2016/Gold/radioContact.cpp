@@ -36,7 +36,7 @@ int main() {
 	}
 	
 	auto squareDist = [&](int a, int b) {
-		return (int)pow(johnPos[a].first - bessiePos[b].first, 2) + (int)pow(johnPos[a].second - bessiePos[b].second, 2);
+		return (int) pow(johnPos[a].first - bessiePos[b].first, 2) + (int) pow(johnPos[a].second - bessiePos[b].second, 2);
 	};
 	
 	vector<vector<int>> dp(N+1, vector<int>(M+1, INF));
