@@ -45,15 +45,9 @@ int main() {
 	
 	for (int i = 0; i <= N; ++i) {
 		for (int j = 0; j <= M; ++j) {
-			if (i+1 <= N) {
-				dp[i+1][j] = min(dp[i+1][j], dp[i][j] + squareDist(i+1, j));
-			}
-			if (j+1 <= M) {
-				dp[i][j+1] = min(dp[i][j+1], dp[i][j] + squareDist(i, j+1));
-			}
-			if (i+1 <= N && j+1 <= M) {
-				dp[i+1][j+1] = min(dp[i+1][j+1], dp[i][j] + squareDist(i+1, j+1));
-			}
+			if (i+1 <= N) dp[i+1][j] = min(dp[i+1][j], dp[i][j] + squareDist(i+1, j));
+			if (j+1 <= M) dp[i][j+1] = min(dp[i][j+1], dp[i][j] + squareDist(i, j+1));
+			if (i+1 <= N && j+1 <= M) dp[i+1][j+1] = min(dp[i+1][j+1], dp[i][j] + squareDist(i+1, j+1));
 		}
 	}
 	
