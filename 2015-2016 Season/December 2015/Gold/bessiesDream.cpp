@@ -2,7 +2,12 @@
 using namespace std;
 
 const int INF = 1e9;
-const pair<int,int> dxy[] = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+const pair<int,int> dxy[] = {
+	{0, 1},
+	{0, -1},
+	{1, 0},
+ 	{-1, 0}
+};
 
 int main() {
 	cin.tie(NULL);
