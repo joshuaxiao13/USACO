@@ -23,7 +23,7 @@ int main() {
 	ll ans = 1e18;
 	
 	for (int rotate = 0; rotate < n; ++rotate) {
-		vector<vector<ll>> cost(n+1, vector<ll>(n+1, 0));
+		vector<vector<ll>> cost(n + 1, vector<ll>(n + 1, 0));
 		for (int l = n; l > 0; --l) {
 			cost[l][l] = getR(l-1, rotate);
 			for (int r = l+1; r <= n; ++r) {
