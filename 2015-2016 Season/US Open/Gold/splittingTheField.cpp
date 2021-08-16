@@ -68,7 +68,7 @@ int main() {
         auto [x, y] = cow[i];
         xMin = min(xMin, x);
         xMax = max(xMax, x);
-        if (cow[i].second == cow[i+1].second) continue;
+        if (cow[i].second == cow[i+1].second) continue; // same y-coordinate
         while (dqMax.front() <= i) dqMax.pop_front();
         while (dqMin.front() <= i) dqMin.pop_front();
         ans = max(ans, one_enclosure - 1LL * (y - cow[0].second) * (xMax - xMin) - 1LL * (cow[N-1].second - cow[i+1].second) * (cow[dqMax.front()].first - cow[dqMin.front()].first));
