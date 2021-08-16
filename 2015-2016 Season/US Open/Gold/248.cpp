@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool dp[248][248][48];
+int dp[248][248];
 
 int main() {
     cin.tie(NULL);
@@ -16,19 +16,17 @@ int main() {
     
     for (int i = 0; i < N; ++i) {
         int x; cin >> x;
-        dp[i][i][x] = true;
+        dp[i][i] = x;
         ans = max(ans, x);
     }
     
     for (int l = N - 1; l >= 0; --l) {
         for (int r = l + 1; r < N; ++r) {
-            for (int i = 2; i < 48; ++i) {
-                for (int m = l; m < r; ++m) {
-                    if (dp[l][m][i-1] && dp[m+1][r][i-1]) {
-                        dp[l][r][i] = true;
-                        ans = max(ans, i);
-                        break;
-                    }
+            for (int m = l; m < r; ++m) {
+                if (dp[l][m] > 0 && dp[l][m] == dp[m+1][r]) {
+                    dp[l][r] = dp[l][m] + 1;
+                    ans = max(ans, dp[l][r]);
+                    break;
                 }
             }
         }
