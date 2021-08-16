@@ -18,7 +18,7 @@ int main() {
     // vertical divider
     sort(cow.begin(), cow.end());
     
-    // monotonic queue to keep track of max and min, can also use a suffix max and min array too    
+    // monotonic queue to keep track of max and min, we can also use a suffix max and min array as well
     deque<int> dqMax, dqMin;
     
     for (int i = 0; i < N; ++i) {
