@@ -24,9 +24,8 @@ int main() {
     
     queue<tuple<int, int,int> > q;
     
-    for (int i = 0; i < 2; ++i) {
-        q.push({-1, 0, i});
-    }
+    q.push({-1, 0, 0});
+    q.push({-1, 0, 1});
     
     while (!q.empty()) {
         auto [i, cost, dir] = q.front();
