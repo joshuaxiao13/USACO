@@ -39,6 +39,7 @@ int main() {
             cout << moves << '\n';
             return 0;
         }
+        
         q.push({moves + 1, {r1, c1, (d1+1)%4}, {r2, c2, (d2+1)%4}});
         q.push({moves + 1, {r1, c1, (d1+3)%4}, {r2, c2, (d2+3)%4}});
         
