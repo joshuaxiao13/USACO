@@ -32,9 +32,7 @@ int main() {
                     for (int i = 0; i < day; ++i) {
                         dp[day][b][x] = min(dp[day][b][x], dp[day-1][b-1][i] + (a[day] != 0));
                     }
-                } else {
-                    dp[day][b][x] = dp[day-1][b][x-1] + (a[day] != x);
-                }
+                } else dp[day][b][x] = dp[day-1][b][x-1] + (a[day] != x);
             }
         }
     }
