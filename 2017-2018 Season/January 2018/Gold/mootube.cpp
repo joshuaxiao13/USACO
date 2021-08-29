@@ -24,8 +24,8 @@ int main() {
     cin.tie(NULL);
     ios_base::sync_with_stdio(false);
     
-    freopen ("mootube.in", "r", stdin);
-    freopen ("mootube.out", "w", stdout);
+    freopen("mootube.in", "r", stdin);
+    freopen("mootube.out", "w", stdout);
 
     int N, Q; cin >> N >> Q;
     
