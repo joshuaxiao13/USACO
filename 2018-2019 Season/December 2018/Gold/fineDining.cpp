@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
 
 const int mxN = 50000, INF = 1e9;
 vector<pair<int, int>> adj[mxN];
