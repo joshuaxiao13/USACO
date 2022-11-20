@@ -44,9 +44,7 @@ int main() {
 				}
 			}
 		}
-		
 		cout << min({dp[N][0], dp[N][1], dp[N][2]}) << '\n';
-		
 	} else {
 		for (int i = 1; i <= N; ++i) {
 			while (ptr + 1 < i && cow[ptr+1].first + K < cow[i].first) { ++ptr; }
@@ -67,10 +65,7 @@ int main() {
 				}
 			}
 		}
-		
 		cout << max({dp[N][0], dp[N][1], dp[N][2]}) << '\n';
-		
 	}
-	
-	return 0;
+
 }
